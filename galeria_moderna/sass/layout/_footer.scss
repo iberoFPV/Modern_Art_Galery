@@ -1,0 +1,94 @@
+// Estilos para el footer
+footer{
+    background-color: $black;
+    padding: 48px 32px;
+    width:100%;
+
+    // Estilos para el logo en el footer
+    .logo-footer{
+        width: 30%;
+        margin-bottom: 38px;
+    }
+
+    // Estilos para el párrafo en el footer
+    p{
+        font-family: $secon-font;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 200;
+        line-height: 26px;
+        color: $white;
+        width: 89%;
+        margin-bottom: 38px;
+    }
+
+    // Estilos para los íconos en el footer
+    .content-icon{
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        
+
+        // Estilos para los enlaces en el footer
+        a{
+            text-decoration: none;
+        }
+        
+        // Estilos para las imágenes en el footer
+        img{
+            width: 120%;
+        }
+    }
+
+    // Estilos específicos para tablet
+    @include breakpoint("tablet"){
+        padding: 56px 40px;
+        display: flex;
+        justify-content: space-between;
+
+        // Ajustes en los estilos de los íconos y el logo para tablet
+        .content-icon{
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            img{
+                width: 80%;
+            }
+        }
+        .logo-footer{
+            width: 20%;
+            margin-bottom: 71px;
+        }
+
+        // Ajustes en los estilos del párrafo para tablet
+        p{
+            width: 281px;
+            height: 104px;
+            margin-right: 60px;
+        }
+    }
+
+
+// Estilos específicos para desktop
+@include breakpoint("desktop"){
+        padding: 80px 120px;
+        // Ajustes en los estilos del logo para desktop
+        .logo-footer{
+            width: 15%;
+        }
+
+        // Ajustes en los estilos del párrafo para desktop
+        p{
+            width: 430px;
+            height: 84px;
+            font-size: 18px;
+        }
+
+        // Ajustes en los estilos de los íconos para desktop
+        .content-icon{
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

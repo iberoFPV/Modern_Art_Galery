@@ -1,0 +1,45 @@
+// Estilos para el botón
+.button{
+    .button-location{
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        background-color: $black;
+        width: 255px;
+        height: 77px;
+        overflow: hidden;
+        justify-content: space-between;
+        border: none;
+    }
+
+    .button__icon{
+        background-color: $gold;
+        height: 105%;
+        width: 52px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+    }
+
+    .button__text{
+        font-family: $title-font;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 3px;
+        color: $white;
+        padding: 0px 0px 0px 35px;
+    }
+
+    // Efecto de hover
+    &:hover{
+        .button__icon{
+            background-color: $black;
+        }
+        .button-location{
+            background-color: $gold;
+        }
+    }
+}

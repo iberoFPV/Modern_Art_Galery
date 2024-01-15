@@ -1,0 +1,235 @@
+// MAPA
+
+.content-map{
+    position: relative;
+
+    // Botón de ubicación
+    .button-location{
+        position: absolute;
+        text-decoration: none;
+        top: 0px;
+        left: 0px;
+        display: flex;
+        align-items: center;
+        background-color: $black;
+        width: 255px;
+        height: 77px;
+        overflow: hidden;
+        border: none;
+        
+        // Estilos específicos para tablet
+        @include breakpoint("tablet"){
+            top: 0px;
+            left: 39px;
+        }
+
+        // Estilos específicos para desktop
+        @include breakpoint("desktop"){
+            top:0;
+            left: 130px;
+        }
+    }
+
+        .button__icon{
+            background-color: $gold;
+            height: 105%;
+            width: 52px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 25%;
+            }
+        }
+        .button__text{
+            font-family: $title-font;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: 3px;
+            color: $white;
+            padding: 0px 0px 0px 35px;
+        }
+
+        &:hover{
+            .button__icon{
+                background-color: $black;
+            }
+            .button-location{
+                background-color: $gold;
+            }
+        }
+        .map-tablet{
+            display: none;
+        }
+        .map-desktop{
+            display: none;
+        }
+        img{
+            width: 100%;
+        }
+
+        // Estilos específicos para tablet
+        @include breakpoint("tablet"){
+            .map-mobile, .map-desktop{
+                display: none;
+            }
+            .map-tablet{
+                display: block;
+            }
+        }
+
+        // Estilos específicos para desktop
+        @include breakpoint("desktop"){
+            .map-tablet{
+                display: none;
+            }
+            .map-desktop{
+                display: block;
+            }
+        }
+
+        
+    }
+
+
+
+
+
+// MAIN
+
+.content-location{
+    background-color: $black;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    // Estilos específicos para tablet
+    @include breakpoint("tablet"){
+        padding: 88px 40px 80px 39px;
+        display: flex;
+        justify-content: space-between;
+        gap: 68px;
+    }
+
+    // Estilos específicos para desktop
+    @include breakpoint("desktop"){
+        padding: 104px 120px 120px 130px;
+        display: flex;
+        justify-content: space-between;
+        gap:330px;
+    }
+    
+
+    h1{
+        color: $white;
+        font-family: $title-font;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 45px;
+        padding: 48px 0px 50px 0px ;
+        @include breakpoint("tablet"){
+            padding: 0px;
+        }
+    }
+
+    .title{
+        color: $gold;
+        font-family: $title-font;
+        font-style: normal;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 32px;
+        padding-bottom: 20px;
+    }
+
+    .direccion{
+        color: $white;
+        font-family: $secon-font;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 200;
+        line-height: 28px;
+    }
+
+    .text-location{
+        color: $white;
+        font-family: $secon-font;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 200;
+        line-height: 28px;
+        width: 92%;
+        padding-bottom: 56px;
+        padding-top: 20px;
+
+        // Estilos específicos para tablet
+        @include breakpoint("tablet"){
+            padding-bottom: 0px;
+            width: 88%;
+        }
+
+        // Estilos específicos para desktop
+        @include breakpoint("desktop"){
+            width: 100%;
+            font-size: 22px;
+        }
+        
+    }
+}
+
+// PIE DE PÁGINA
+
+footer.footer-location{
+    background-color: $gold;
+    padding: 48px 32px 48px 32px;
+
+    .logo-footer-location{
+        margin-bottom: 38px;
+        width: 30%;
+        filter: invert(1);
+    }
+
+    p{
+        color: $black;
+    }
+
+    .content-icon a{
+        color: $black;
+    }
+
+    .content-icon img{
+        filter: invert(1);
+    }
+
+    // Estilos específicos para tablet
+    @include breakpoint("tablet"){
+        .footer-location{
+            padding: 56px 40px 56px 39px;
+        }
+
+        .logo-footer-location{
+            width: 17%;
+            margin-bottom: 75px;
+        }
+
+        .content-icon{
+            gap: 16px;
+            img{
+                width:100%;
+            }
+        }
+    }
+
+    // Estilos específicos para desktop
+    @include breakpoint("desktop"){
+        padding: 80px 120px 80px 120px;
+
+        p{
+            font-size: 18px;
+        }
+    }
+}
+
+

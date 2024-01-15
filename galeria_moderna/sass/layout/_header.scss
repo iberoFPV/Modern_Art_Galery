@@ -1,0 +1,146 @@
+// Estilos para el encabezado principal
+.header-principal{
+    width: 96%;
+    margin-bottom: 120px;
+
+    // Estilos específicos para tablet
+    @include breakpoint(tablet){
+        width: 100%;
+        height: 700px;
+    }
+
+    // Estilos específicos para desktop
+    @include breakpoint("desktop"){
+        margin-bottom: 190px;
+        background-color: $black;
+        width: 450px;
+        height: 799px;
+        top: 0;
+        left: 0;
+    }
+}
+
+// Estilos para la sección de imágenes en el encabezado
+.content-first-img {
+    text-align: center;
+    img{
+        width: 104%;
+        margin-bottom: 27px;
+        }
+    .tablet, .desktop{
+        display: none;
+    }
+
+    // Estilos específicos para tablet
+    @include breakpoint(tablet){
+        img{
+            width: 60%;
+            height: 700px;
+            position: absolute;
+        }
+        .tablet{
+            display: flex;
+        }
+        .mobile, .desktop {
+            display: none;
+        }
+    }
+
+    // Estilos específicos para desktop
+    @include breakpoint("desktop"){
+        .mobile, .tablet{
+            display: none;
+        }
+        .desktop{
+            display: block;
+            left: 375px;
+            width: 450px;
+            height: 800px;
+            img{
+                width: 100%;
+            }
+            
+        }
+        
+    }
+}
+
+// Estilos para el contenido del encabezado
+.content-header{
+    padding-left: 10px;
+    padding-right: 10px;
+
+    // Estilos específicos para tablet
+    @include breakpoint(tablet){
+        position: relative;
+        top:145px;
+        right: -380px;
+        width: 52%;
+    }
+
+    // Estilos específicos para desktop
+    @include breakpoint("desktop"){
+        top: 190px;
+        right: -700px;
+        
+    }
+
+
+    h1{
+        // Estilos comunes
+        font-family: $title-font;
+        font-size: 58px;
+        font-weight: 900;
+        font-style: normal;
+        line-height: 53px;
+        width: 72%;
+        margin-bottom: 18px;
+        color: $black;
+        
+        // Estilos específicos para tablet
+        @include breakpoint("tablet"){
+            font-size: 70px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 65px;
+            width: 87%;
+            margin-bottom: 48px;
+        }
+
+        // Estilos específicos para desktop
+        @include breakpoint("desktop"){
+            color: $white;
+            position: absolute;
+            font-size: 96px;
+            line-height: 88px;
+            top: 0px;
+            left: -604px;
+            width: 194%;
+        }
+    }
+
+    p{
+        // Estilos comunes
+        font-family: $secon-font;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 28px;
+        color: $grey;
+        margin-bottom: 25px;
+        width: 94%;
+
+        // Estilos específicos para tablet
+        @include breakpoint(tablet){
+            margin-bottom: 48px;
+        }
+
+        // Estilos específicos para desktop
+        @include breakpoint("desktop"){
+            font-size: 22px;
+            width: 350px;
+            
+        }
+    }
+}
+
